@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
