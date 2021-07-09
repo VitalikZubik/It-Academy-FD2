@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/a2.css">
+    <title>A2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>A2</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                <span class="variable">const</span> answer = <span class="function">prompt</span>('Введите строку.', '');
+
+                function <span class="function">trim</span>(str) {
+                    <span class="variable">let</span> strStart = 0;
+                    <span class="variable">let</span> strEnd = str.length - 1;
+                
+                    <span class="operation">for</span> (let i = 0 , k = str.length - 1; i < str.length; i++, k--) {
+                        <span class="operation">if</span> (i > strStart && k < strEnd) {
+                            <span class="operation">break</span>;
+                        } 
+                
+                        <span class="operation">if</span> (str[i] === ' ' && i <= strStart){
+                           strStart++;
+                        }
+                        
+                        <span class="operation">if</span> (str[str.length - i - 1] === ' ' && k >= strEnd) {
+                            strEnd--;
+                        } 
+                    }   
+                
+                    <span class="variable">let</span> result = str.slice(strStart, strEnd + 1);
+                    result = `$${result}$`;
+                
+                    <span class="operation">return</span> result;
+                }
+                
+                console.<span class="function">log</span>(<span class="function">trim</span>(answer));
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/a2.js"></script>
+</body>
+</html>

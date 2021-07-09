@@ -14,3 +14,75 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+
+.link {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.418);
+    transition: all .7s;
+}
+
+.link:hover {
+    width: 140px;
+    height: 50px;
+}
+
+.link:hover a{
+    font-size: 25px;
+}
+
+.link a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all .7s; 
+    width: 100%;
+    line-height: 38px;    
+}
+
+.link.home a {
+    font-size: 18px;
+}
+
+.link.home:hover {
+    width: 140px;
+    height: 50px;
+}
+
+.link.home:hover a{
+    font-size: 22px;
+}
+
+pre {
+    background: #2d2d2d;
+    border-radius: 20px;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+
+pre code {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.5;
+    color: white;
+}
+
+code .function {
+    color: #f08d49;
+}
+
+code .operation {
+    color: rgb(206, 48, 206);
+}
+
+code .variable {
+    color: rgb(79, 79, 245);
+}
