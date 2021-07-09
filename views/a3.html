@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/a3.css">
+    <title>A3</title>
+</head>
+<body>
+    <div class="container">
+        <h1>A3</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                <span class="variable">const</span> answer = <span class="function">prompt</span>('Введите фразу для проверки на палиндром.', '');
+
+                function <span class="function">isPalindrome</span>(str) {
+                    <span class="variable">let</span> cleanStr = str.<span class="function">toLowerCase</span>().<span class="function">replace</span>(/ё/g, 'е')
+                    cleanStr = cleanStr.<span class="function">replace</span>(/[ьъ.,$&#*()\/:;\s]/g, '')
+                    <span class="operation">return</span> cleanStr === cleanStr.<span class="function">split</span>('').<span class="function">reverse</span>().<span class="function">join</span>('');
+                }
+
+                console.<span class="function">log</span>(<span class="function">isPalindrome</span>(answer));
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/a3.js"></script>
+</body>
+</html>
