@@ -25,6 +25,10 @@ app.get('/a4', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'a4.html'))
 })
 
+app.get('/treesum', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'treeSum.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
