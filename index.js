@@ -13,6 +13,18 @@ app.get('/anketa', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'anketa.html'))
 })
 
+app.get('/a2', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'a2.html'))
+})
+
+app.get('/a3', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'a3.html'))
+})
+
+app.get('/a4', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'a4.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

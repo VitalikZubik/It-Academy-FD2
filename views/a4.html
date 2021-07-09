@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/a4.css">
+    <title>A4</title>
+</head>
+<body>
+    <div class="container">
+        <h1>A4</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                <span class="variable">const</span> answer = <span class="function">prompt</span>('Введите фразу для проверки на палиндром.', '');
+
+                function <span class="function">isPalindrome</span>(str){
+                    <span class="variable">const</span> cleanStr = <span class="function">clearOutString</span>(str);
+
+                    <span class="operation">if</span> (cleanStr.length === 1){
+                        <span class="operation">return</span> true;
+                    }
+
+                    <span class="operation">if</span> (cleanStr.length === 2) {
+                        <span class="operation">return</span> cleanStr[0] === cleanStr[1]; 
+                    }
+
+                    <span class="operation">if</span> (cleanStr[0] === cleanStr.slice(-1)) {
+                        <span class="operation">return</span> <span class="function">isPalindrome</span>(cleanStr.slice(1,-1)) 
+                    } 
+
+                    <span class="operation">return</span> false;
+                }
+
+                function <span class="function">clearOutString</span>(str) {
+                    str = str.<span class="function">toLowerCase</span>().<span class="function">replace</span>(/ё/g, 'е')
+                    str = str.<span class="function">replace</span>(/[ьъ.,$&#*()\/:;\s]/g, '')
+                    <span class="operation">return</span> str
+                }
+
+                console.<span class="function">log</span>(<span class="function">isPalindrome</span>(answer));
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/a4.js"></script>
+</body>
+</html>
