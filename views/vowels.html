@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/vowels.css">
+    <title>VOWELS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>VOWELS</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                <span class="variable">const</span> str = prompt('Введите строку, для подсчета количества русских гласных букв в ней.', '');
+
+                function <span class="function">findVowels</span>(str) {
+                    <span class="variable">let</span> count = 0;
+                    <span class="variable">const</span> vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'];
+                    str = str.<span class="function">toLowerCase</span>();
+                
+                    <span class="operation">for</span>(<span class="variable">let</span> char of str) {
+                        <span class="operation">if</span> (vowels.<span class="function">includes</span>(char)) {
+                            count++
+                        }
+                    }
+                
+                    <span class="operation">return</span> count
+                }
+                
+                <span class="function">alert</span>(<span class="function">findVowels</span>(str));
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/vowels.js"></script>
+</body>
+</html>

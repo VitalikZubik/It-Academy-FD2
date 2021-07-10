@@ -49,6 +49,10 @@ app.get('/b6', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'b6.html'))
 })
 
+app.get('/vowels', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'vowels.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
