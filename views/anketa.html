@@ -10,60 +10,60 @@
 </head>
 <body>
     <div class="container">
-        <h1>Анкета</h1>
+        <h1>ANKETA</h1>
 
-        <div class="link">
+        <div class="link home">
             <a href="/">На главную</a>
         </div>
 
         <div class="code">
             <pre>
                 <code>
-                    let name = prompt('Ваше имя?', '');
-                    let surname =  prompt('Ваша фамилия?', '');
-                    let patronymic =  prompt('Ваше отчество?', '');
-                    let age = prompt('Ваш возраст?', '');
-                    let sex = confirm('Ваш пол - мужской? ок - да, отмена - нет.');
-                    let pension;
+                    <span class="variable">let</span> name = <span class="function">prompt</span>('Ваше имя?', '');
+                    <span class="variable">let</span> surname =  <span class="function">prompt</span>('Ваша фамилия?', '');
+                    <span class="variable">let</span> patronymic =  <span class="function">prompt</span>('Ваше отчество?', '');
+                    <span class="variable">let</span> age = <span class="function">prompt</span>('Ваш возраст?', '');
+                    <span class="variable">let</span> sex = <span class="function">confirm</span>('Ваш пол - мужской? ок - да, отмена - нет.');
+                    <span class="variable">let</span> pension;
 
-                    if (sex) {
+                    <span class="operation">if</span> (sex) {
                         sex = 'мужской';
-                    } else {
+                    } <span class="operation">else</span> {
                         sex = 'женский';
                     }
 
-                    for(let i = 0; i < 1; i++) {
-                        age = parseInt(age);
+                    <span class="operation">for</span> (<span class="variable">let</span> i = 0; i < 1; i++) {
+                        age = <span class="function">parseInt</span>(age);
 
-                        if(name === null || name === '') {
-                            name = prompt('Ваше имя?', '');
+                        <span class="operation">if</span> (name === null || name === '') {
+                            name = <span class="function">prompt</span>('Ваше имя?', '');
                             i--;
-                        } else if (surname === null || surname === '') {
-                            surname = prompt('Ваша фамилия?', '');
+                        } <span class="operation">else if</span> (surname === null || surname === '') {
+                            surname = <span class="function">prompt</span>('Ваша фамилия?', '');
                             i--
-                        } else if (patronymic === null || patronymic === '') {
-                            patronymic = prompt('Ваше отчество?', '');
+                        } <span class="operation">else if</span> (patronymic === null || patronymic === '') {
+                            patronymic = <span class="function">prompt</span>('Ваше отчество?', '');
                             i--
-                        } else if (isNaN(age)) {
-                            age = prompt('Ваш возраст?', '');
+                        } <span class="operation">else if</span> (isNaN(age)) {
+                            age = <span class="function">prompt</span>('Ваш возраст?', '');
                             i--
-                        } else {
-                            break;
+                        } <span class="operation">else</span> {
+                            <span class="operation">break</span>;
                         }    
                     }
 
-                    if (age >= 65 && sex === 'мужской') {
+                    <span class="operation">if</span> (age >= 65 && sex === 'мужской') {
                         pension = 'да';
-                    } else if (age >= 60 && sex === 'женский') {
+                    } <span class="operation">else if</span> (age >= 60 && sex === 'женский') {
                         pension = 'да';
-                    } else {
+                    } <span class="operation">else</span> {
                         pension = 'нет';
                     }
 
-                    const ageInDays = age * 365;
-                    const afterFive = age + 5;
+                    <span class="variable">const</span> ageInDays = age * 365;
+                    <span class="variable">const</span> afterFive = age + 5;
 
-                    alert(`
+                    <span class="function">alert</span>(`
                         ваше ФИО: ${surname} ${name} ${patronymic}
                         ваш возраст в годах: ${age}
                         ваш возраст в днях: ${ageInDays}
