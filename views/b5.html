@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/b5.css">
+    <title>B5</title>
+</head>
+<body>
+    <div class="container">
+        <h1>B5</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                function <span class="function">replaceСharacters</span> (str) {
+                    str = str.<span class="function">replace</span>(/&/g, '&amp;');
+                    str = str.<span class="function">replace</span>(/</g, '&lt;');
+                    str = str.<span class="function">replace</span>(/>/g, '&gt;');
+                    str = str.<span class="function">replace</span>(/'/g, '&apos;');
+                    str = str.<span class="function">replace</span>(/"/g, '&quot;');
+                
+                    <span class="operation">return</span> str;
+                }
+                
+                function <span class="function">buildWrapper</span>(teg) {
+                    <span class="operation">return</span> function (str, attributes = {}) {
+                        str = <span class="function">replaceСharacters</span>(str);
+                        <span class="variable">let</span> attributesStr = '';
+                        <span class="operation">if</span> (attributes) {
+                            <span class="operation">for</span> (<span class="variable">let</span> key in attributes) {
+                                attributesStr += ` ${key}='${replaceСharacters(attributes[key])}'`
+                            }
+                        }
+                        <span class="operation">return</span> `<${teg}${attributesStr}>${str}</${teg}>`
+                    }
+                }
+                
+                <span class="variable">const</span> wrapH1 = <span class="function">buildWrapper</span>('H1');
+                
+                console.<span class="function">log</span>(<span class="function">wrapH1</span>('Заголовок в H1 теге', {align: 'center', title: "M&M's"}));
+                console.<span class="function">log</span>(<span class="function">wrapH1</span>('Заголовок в H1 теге'));
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/b5.js"></script>
+</body>
+</html>
