@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/mood.css">
+    <title>MOOD</title>
+</head>
+<body>
+    <div class="container">
+        <h1>MOOD</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                function <span class="function">randomDiap</span>(n,m) {
+                    <span class="operation">return</span> <span class="class">Math</span>.<span class="function">floor</span>(Math.<span class="function">random</span>()*(m-n+1))+n;
+                }
+                
+                function <span class="function">mood</span>(colorsCount) {
+                    <span class="variable">const</span> colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
+                    <span class="variable">const</span> selectedColors = {}
+                    <span class="variable">let</span> id = 1;
+                    console.<span class="function">log</span>( 'цветов: ' + colorsCount );
+                
+                    <span class="operation">for</span> ( let i=1; i<=colorsCount; i++ ) {
+                        <span class="variable">const</span> n=<span class="function">randomDiap</span>(1,7);
+                        <span class="variable">const</span> colorName=colors[n];
+                
+                        <span class="operation">if</span> (<span class="class">Object</span>.<span class="function">keys</span>(selectedColors).length === 0) {
+                            selectedColors[id++] = colorName;
+                            console.<span class="function">log</span>( colorName );
+                        } <span class="operation">else</span> {
+                            <span class="variable">let</span> isFound = false;
+                            <span class="operation">for</span> (<span class="variable">let</span> elem in selectedColors) {
+                                <span class="operation">if</span> (colorName === selectedColors[elem]) {
+                                    i--
+                                    isFound = true;
+                                    <span class="operation">break</span>;
+                                }                    
+                            } 
+                
+                            <span class="operation">if</span> (!isFound) {
+                                selectedColors[id++] = colorName;
+                                console.<span class="function">log</span>( colorName ); 
+                            }       
+                        }
+                    }   
+                }
+                
+                <span class="function">mood</span>(3);
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/mood.js"></script>
+</body>
+</html>
