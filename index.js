@@ -57,6 +57,10 @@ app.get('/mood', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'mood.html'))
 })
 
+app.get('/drink', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'drink.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

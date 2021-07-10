@@ -6,6 +6,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 70px;
+    grid-auto-rows: 70px;
     align-items: center;
     justify-items: center;
     gap: 10px;
