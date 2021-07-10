@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/b6.css">
+    <title>B6</title>
+</head>
+<body>
+    <div class="container">
+        <h1>B6</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                function <span class="function">formatNumber</span> (num, format) {
+                    <span class="variable">const</span> dotIdx = format.<span class="function">split</span>('').<span class="function">indexOf</span>('.');
+                    <span class="variable">const</span> countNumsAfterDot = format.length - 1 - dotIdx;
+                    <span class="variable">let</span> formatNum = '';
+                
+                    num = num.<span class="function">toFixed</span>(countNumsAfterDot);
+                
+                    for(<span class="variable">let</span> i = 0, l = num.length - 1; l >= 0; i++, l-- ) {
+                        <span class="operation">if</span>(
+                            format[format.length - i -1] === '#' || 
+                            (format[format.length - i -1] === '.' && num[l] === '.')
+                            ) {
+                                formatNum += num[l];
+                        } <span class="operation">else if</span> (format[format.length - i -1] === ' ' ) {
+                            formatNum += " ";
+                            l++
+                        }
+                    }
+                
+                    <span class="operation">return</span> formatNum.<span class="function">split</span>('').<span class="function">reverse</span>().<span class="function">join</span>('');
+                }
+                
+                console.<span class="function">log</span>(<span class="function">formatNumber</span>(12345.1234, '# ### ###.##'));
+                console.<span class="function">log</span>(<span class="function">formatNumber</span>(2.3, '# ### ###.##'));
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/b6.js"></script>
+</body>
+</html>
