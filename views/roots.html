@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/roots.css">
+    <title>ROOTS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ROOTS</h1>
+
+        <div class="link home">
+            <a href="/">На главную</a>
+        </div>
+
+        <pre>
+            <code>
+                <span class="operation">if</span> (a > 0 || a < 0) {
+                    <span class="variable">var</span> d=b*b-4*a*c;
+            
+                    <span class="operation">if</span> ( d<0 ) {
+                        <span class="operation">return</span> []; 
+                    }                        
+            
+                    <span class="operation">if</span> ( d==0 ){
+                        <span class="operation">return</span> [ -b/(2*a) ];
+                    }                        
+            
+                    <span class="variable">var</span> x1=(-b+Math.sqrt(d))/(2*a);
+                    <span class="variable">var</span> x2=(-b-Math.sqrt(d))/(2*a);
+                    <span class="operation">return</span> [ x1, x2 ];
+
+                } <span class="operation">else if</span> (a===0) {
+                    <span class="variable">var</span> x = -c/b;
+                    <span class="operation">return</span>[x]
+                }
+            </code>
+        </pre>
+    </div>
+
+    <script src="/js/roots.js"></script>
+</body>
+</html>

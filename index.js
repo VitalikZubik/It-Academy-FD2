@@ -53,6 +53,10 @@ app.get('/vowels', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'vowels.html'))
 })
 
+app.get('/roots', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'roots.html'))
+})
+
 app.get('/mood', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'mood.html'))
 })
