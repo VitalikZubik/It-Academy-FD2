@@ -77,6 +77,10 @@ app.get('/vowels_arr', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'vowels_arr.html'))
 })
 
+app.get('/dyn_form', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'dyn_form.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
