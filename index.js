@@ -29,6 +29,10 @@ app.get('/treesum', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'treeSum.html'))
 })
 
+app.get('/countries', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'countries.html'))
+})
+
 app.get('/b1', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'b1.html'))
 })
