@@ -74,6 +74,7 @@ const dynForm = (arr) => {
                             const select = document.createElement('select');
                             select.setAttribute('name', elem.name);
                             select.setAttribute('class', elem.name);
+                            input.setAttribute('id', elem.name);
 
                             for (let obj of elem.variants) {
                                 const option = document.createElement('option');
@@ -98,6 +99,7 @@ const dynForm = (arr) => {
                                 input.setAttribute('type', 'radio');
                                 input.setAttribute('name', elem.name);
                                 input.setAttribute('value', obj.value);
+                                input.setAttribute('id', elem.name);
 
                                 const span = document.createElement('span');
                                 span.setAttribute('class','radio_value');
@@ -113,6 +115,7 @@ const dynForm = (arr) => {
                             input.setAttribute('type', 'checkbox');
                             input.setAttribute('name', elem.name);
                             input.setAttribute('checked','');
+                            input.setAttribute('id', elem.name);
 
                             div.appendChild(input);
                             break;
@@ -120,6 +123,7 @@ const dynForm = (arr) => {
                             const textarea = document.createElement('textarea');
                             textarea.setAttribute('name', elem.name);
                             textarea.setAttribute('class', elem.kind);
+                            textarea.setAttribute('id', elem.name);
 
                             div.appendChild(textarea);
                             break;

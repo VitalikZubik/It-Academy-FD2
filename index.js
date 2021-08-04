@@ -81,6 +81,10 @@ app.get('/dyn_form', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'dyn_form.html'))
 })
 
+app.get('/dyn_form_valid', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'dyn_form_valid.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

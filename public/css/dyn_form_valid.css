@@ -1,0 +1,65 @@
+body {
+    background-color: rgba(147, 241, 205, 0.877);
+}
+
+.wrapper_forms {
+    width: 750px;
+    margin-top: 15px;
+}
+
+.wrapper_element {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 3px;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+.longtext {
+    width: 100%;
+}
+
+.date {
+    width: 40%;
+}
+
+.shorttext {
+    width: 40%;
+}
+
+.number {
+    width: 20%;
+}
+
+.division {
+    width: 38%;
+}
+
+.radio_value {
+    position: relative;
+    top: -3px;
+    padding-right: 5px;
+}
+
+.memo {
+    grid-column: 1/3;
+    grid-row: 9/10;
+}
+
+.error {
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+.error_valedation {
+    outline: 2px solid red;
+}
+
+.successful_valedation {
+    outline: 3px solid rgb(25, 206, 25);
+}
