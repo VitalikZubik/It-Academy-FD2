@@ -39,6 +39,8 @@ h1 {
     width: 200px;
 }
 
+
+
 .link a {
     display: inline-block;
     text-align: center;
@@ -51,8 +53,16 @@ h1 {
     line-height: 38px;    
 }
 
+.link_drink_class a{
+    font-size: 17px;
+}
+
 .link:hover a{
     font-size: 23px;
+}
+
+.link_drink_class:hover a{
+    font-size: 20px;
 }
 
 .link.link_form_valid:hover a {
@@ -70,6 +80,10 @@ h1 {
 
 .link.home:hover a{
     font-size: 22px;
+}
+
+.done {
+    color: green;
 }
 
 pre {
