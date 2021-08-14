@@ -88,6 +88,11 @@ app.get('/dyn_form_valid', (req, res) => {
 app.get('/clock_dom', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'clock_dom.html'))
 })
+
+app.get('/clock_dom_svg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'clock_dom_svg.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

@@ -1,0 +1,50 @@
+body {
+    background-color: rgba(122, 252, 110, 0.877);
+}
+
+.wrapper_clock {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 400px;
+    height: 400px;
+    background: rgba(70, 67, 67, 0.575);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgb(240, 237, 64);
+}
+
+.item {
+    fill: rgb(73, 245, 39);
+}
+
+.itemText {    
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hourArrow {
+    transform-origin: 150px 150px;
+    transform: rotate(0deg);
+}
+
+.minuteArrow {
+    transform-origin: 150px 150px;
+    transform: rotate(0deg);
+}
+
+.secondArrow {
+    transform-origin: 150px 150px;
+    transform: rotate(0deg);
+}
+
+.electronicClock {
+    font-size: 20px;
+    font-weight: bold;
+}
