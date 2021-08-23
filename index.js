@@ -93,6 +93,10 @@ app.get('/clock_dom_svg', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'clock_dom_svg.html'))
 })
 
+app.get('/clock_canvas', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'clock_canvas.html'))
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

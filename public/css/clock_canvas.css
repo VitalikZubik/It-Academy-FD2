@@ -1,0 +1,14 @@
+body {
+    background-color: rgba(227, 252, 85, 0.877);
+}
+
+.wrapper_clock {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 400px;
+    height: 400px;
+    background: rgba(70, 67, 67, 0.575);
+    margin: 0 auto;
+    margin-top: 20px;
+}
